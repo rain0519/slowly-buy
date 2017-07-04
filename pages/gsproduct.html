@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>凑单品商品</title>
+    <!--<link rel="stylesheet/less" href="../css/base.less">-->
+    <link rel="stylesheet" href="../css/base.css">
+    <!--<link rel="stylesheet/less" href="../css/gsproduct.less">-->
+    <link rel="stylesheet" href="../css/gsproduct.css">
+    <link rel="stylesheet" text="text/css" href="../font/f2/iconfont.css">
+</head>
+<body>
+<!--head-->
+<div class="head">
+    <div class="back"><a href="../index.html">&lt;</a></div>
+    <h1>凑单品</h1>
+    <div class="home">
+        <a href="javascript:;" class="icon-app"></a>
+    </div>
+</div>
+
+<!--gsproduct-->
+<div class="gsproduct">
+    <div class="list">
+        <!--gslist-head-->
+        <div class="gslist-head">
+            <div class="gslist-title">
+                <div class="ul-wrap">
+                    <ul class="gslist-nav">
+                        <li class="jd">
+                            <a href="#">京东</a>
+                            <span>▲</span>
+                        </li>
+                        <li class="area">
+                            <a href="#">华北</a>
+                            <span>▲</span>
+                        </li>
+                        <li class="price">
+                            <a href="#">全部价格</a>
+                            <span>▲</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search">
+                <div class="iconfont icon-sousuo_sousuo"></div>
+            </div>
+            <!--隐藏的下拉框-->
+            <div class="popsort popbox">
+                <ul class="clearfix shopbox">
+                    <script type="text/html" id="shopId">
+                        {{each result as v i}}
+                        <li>
+                            <a href="javascript:;" data-id={{v.shopId}}>{{v.shopName}}</a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <div class="popcat popbox">
+                <ul class="clearfix areabox">
+                    <script type="text/html" id="areaId">
+                        {{each result as v i}}
+                        <li>
+                            <a href="javascript:;" data-id={{v.areaId}}>{{v.areaName}}</a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <div class="popprice popbox">
+                <ul class="clearfix">
+                        <li>
+                            <a href="#" >全部价格</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--凑单产品列表-->
+        <div class="gslist-con">
+            <ul class="clearfix sh-lists">
+               <!-- <li>
+                    <a href="http://item.m.jd.com/ware/view.action?wareId=1274360">
+                        <div class="pic">
+                            <img src="http://img10.360buyimg.com/n7/jfs/t577/85/103283769/55548/3ecfcbf8/5461b6e1N70e46439.jpg" alt="">
+                        </div>
+                        <span class="div title">新雅</span>
+                        <div class="other">
+                            <div class="price">0.50</div>
+                            <div class="btn">去凑单</div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </li>-->
+                <script type="text/html" id="shopList">
+                    {{each result as v i}}
+                    <li>
+                        <a href="http://item.m.jd.com/ware/view.action?wareId=1274360">
+                            <div class="pic">
+                                <img src="{{v.productImg}}" alt="">
+                            </div>
+                            <span class="div title">{{v.productName}}</span>
+                            <div class="other">
+                                <div class="price">{{v.productPrice}}</div>
+                                <div class="btn">去凑单</div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--foot-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" >
+            <img src="../images/top.jpg" alt="" width="15" height="15">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color:red">手机App下载</a>
+            <a href="index.html">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/template.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/gsproduct.js"></script>
+<script src="../lib/less.min.js"></script>
+<script>
+    less.watch();
+</script>
+</body>
+</html>

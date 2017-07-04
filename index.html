@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet/less" href="css/index.less">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="font/f1/iconfont.css">
+</head>
+<body>
+    <!--header-->
+    <div class='header'>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="index.html">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!--search-->
+    <div class="form-search">
+        <form action="#" class="search">
+            <input type="search" placeholder="请输入你想比价的商品" >
+            <input type="button" value="搜索">
+        </form>
+    </div>
+
+    <!--menu-->
+    <div class="menu clearfix" >
+        <!--首页模板引擎-->
+        <script type="text/html" id="menu">
+            <ul class="menu-items">
+                {{each result as value i}}
+                <li>
+                 {{if value.indexmenuId==7}}
+                    <a href="{{value.titlehref}}">
+                  {{else}}
+                    <a href="pages/{{value.titlehref}}">
+                 {{/if}}
+                        {{#value.img}}
+                        <p>{{value.name}}</p>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+    </div>
+
+    <!--recommen-->
+    <div class="recommen rec-list">
+        <div class="list-title">
+            <span>超值折扣推荐</span>
+            <img src="./images/more.png" alt="">
+        </div>
+    </div>
+
+    <!--recommen-product-->
+    <div class="recommen-product">
+        <div class="product-list">
+            <div class="pro-lis clearfix">
+                <!--list模板引擎-->
+                <script type="text/html" id="proList">
+                    <ul class="clearfix">
+                        {{each result as value i}}
+                        <li class="clearfix">
+                            <a href="pages/moneyctrlproduct.html?productid={{value.productId}}">
+                                <div class="pic">
+                                    {{#value.productImgSm}}
+                                </div>
+                                <div class="clearfix info">
+                                    <div class="title">
+                                        {{value.productName}}
+                                        <span>{{value.productPinkage}}</span>
+                                    </div>
+                                    <div class="other">
+                                        <span class="mall">{{value.productFrom}} | {{value.productTime}}</span>
+                                        <span class="comment">
+                                    <i class="iconfont icon-liuyan"></i>
+                                    {{value.productComCount}}
+                                </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </script>
+            </div>
+            <div class="more-bar">
+                <a href="pages/moneyctrl.html">更多优惠消息>></a>
+            </div>
+        </div>
+    </div>
+
+    <!--brand-->
+    <div class="brand rec-list">
+        <div class="list-title">
+            <span>品牌排行</span>
+            <img src="./images/more.png" alt="">
+        </div>
+    </div>
+
+    <!--foot-->
+    <div class="foot">
+        <div class="foot-top">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#" >
+                <img src="./images/top.jpg" alt="" width="15" height="15">
+                返回顶部
+            </a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="javascript:;" style="color:red">手机App下载</a>
+                <a href="index.html">慢慢买手机版</a>--掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/template.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./lib/less.min.js"></script>
+    <script>
+        less.watch();
+    </script>
+</body>
+</html>

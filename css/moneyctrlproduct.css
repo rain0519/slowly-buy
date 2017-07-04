@@ -1,0 +1,193 @@
+/*省钱控产品*/
+/*head*/
+.head {
+  background-color: #ff841d;
+  color: #fff;
+  height: 44px;
+  width: 100%;
+  position: relative;
+}
+.head .back {
+  width: 50px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 44px;
+  font-family: "宋体";
+  font-weight: bold;
+  float: left;
+  position: relative;
+}
+.head .back a {
+  display: block;
+  color: #fff;
+}
+.head h1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90%;
+  text-align: center;
+  line-height: 44px;
+  font-size: 20px;
+}
+.head .home {
+  width: 50px;
+  height: 44px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.head .home .icon-app {
+  display: block;
+  height: 44px;
+  background-image: url("../images/header_app.png");
+  width: 50px;
+  background-repeat: no-repeat;
+  margin-top: 5px;
+  background-size: 32px;
+}
+/*money-product*/
+.money-product .container {
+  max-width: 960px;
+  /*模板引擎城市*/
+}
+.money-product .container .cup-content {
+  padding: 5px 10px;
+  /*模板引擎城市*/
+}
+.money-product .container .cup-content h3 {
+  font-size: 22px;
+  color: #5a5a5a;
+  margin: 10px 10px;
+  font-weight: normal;
+}
+.money-product .container .cup-content .info {
+  margin-left: 10px;
+  color: #999;
+  font-size: 12px;
+}
+.money-product .container .cup-content .conn .pic-right {
+  float: right;
+  width: 120px;
+}
+.money-product .container .cup-content .conn .pic-right img {
+  width: 120px;
+  height: 120px;
+}
+.money-product .container .cup-content .conn .conten {
+  font-size: 16px;
+  line-height: 28px;
+  color: #606060;
+  padding: 15px 0;
+  margin-left: 10px;
+}
+.money-product .container .cup-content .conn .conten img {
+  max-width: 100%;
+  height: auto;
+}
+.money-product .container .cup-content .area {
+  left: -6px;
+  padding: 0px 0px 10px 0px;
+  background-color: #ffffff;
+  width: 138px;
+}
+.money-product .container .cup-content .area ul li {
+  font-size: 12px;
+  font-family: "Microsoft Yahei";
+  line-height: 20px;
+}
+.money-product .container .cup-content .area ul li a {
+  display: block;
+  padding: 0px 10px;
+}
+.money-product .container .cup-content .area ul li a span {
+  border-bottom: 1px dotted #c0c0c0;
+  display: block;
+  padding: 0px 10px;
+  text-align: left;
+}
+.money-product .container .cup-content .area ul li a span strong {
+  float: right;
+  color: #f27b04;
+}
+.money-product .container .cup-content .golink a {
+  display: block;
+  margin: 20px 10px;
+  background-color: #ff9000;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  line-height: 30px;
+}
+.money-product .container .cup-erm {
+  text-align: center;
+  margin: 10px 20px;
+}
+.money-product .container .cup-erm img {
+  width: 100%;
+  height: auto;
+}
+.money-product .container .cup-pl .cu-content-pl .tit {
+  font-size: 16px;
+  padding: 6px 8px;
+}
+.money-product .container .cup-pl .cu-content-pl .reply {
+  padding: 6px 8px;
+}
+.money-product .container .cup-pl .cu-content-pl .reply .form {
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 98%;
+}
+.money-product .container .cup-pl .cu-content-pl .reply .form .ctrl {
+  position: relative;
+  background-color: #fbfbfb;
+  height: 36px;
+  border-top: 1px  solid #f2f2f2;
+}
+.money-product .container .cup-pl .cu-content-pl .reply .form .ctrl input {
+  position: absolute;
+  right: -2px;
+  background-color: #ff841d;
+  width: 100px;
+  height: 39px;
+  font-size: 16px;
+  color: #fff;
+}
+.money-product .container .cup-pl .cu-content-pl .list ul li {
+  padding: 18px 10px;
+}
+.money-product .container .cup-pl .cu-content-pl .list ul li .userimg {
+  width: 40px;
+  float: left;
+}
+.money-product .container .cup-pl .cu-content-pl .list ul li .userimg img {
+  width: 40px;
+  background-position: top;
+  border-radius: 50%;
+  height: 40px;
+}
+.money-product .container .cup-pl .cu-content-pl .list .con {
+  padding-left: 50px;
+}
+.money-product .container .cup-pl .cu-content-pl .list .con .name {
+  margin-bottom: 6px;
+  height: 16px;
+}
+.money-product .container .cup-pl .cu-content-pl .list .con .name .username {
+  color: #5997c0;
+  float: left;
+  font-size: 13px!important;
+}
+.money-product .container .cup-pl .cu-content-pl .list .con .name .time {
+  color: #999;
+  float: right;
+  font-size: 13px!important;
+}
+.money-product .container .cup-pl .cu-content-pl .list .content {
+  font-size: 15px!important;
+  color: #606060;
+  line-height: 20px;
+}

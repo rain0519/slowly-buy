@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣列表功能界面</title>
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet/less" href="../css/inlanddiscount.less">
+    <link rel="stylesheet" href="../css/inlanddiscount.css">
+</head>
+<body>
+<!--head-->
+<div class="head">
+    <div class="back"><a href="../index.html">&lt;</a></div>
+    <h1>国内折扣</h1>
+    <div class="home">
+        <a href="javascript:;" class="icon-app"></a>
+    </div>
+</div>
+
+<!--recommen-product-->
+<div class="recommen-product">
+    <div class="inland-discount">
+        <ul class="clearfix inlandList">
+            <!--模板引擎-->
+            <script type="text/html" id="inlandList">
+                {{each result as v i}}
+                <li>
+                    <a href="inlanddiscountproduct.html?{{v.productId}}">
+                        <div class="img">
+                            {{#v.productImg}}
+                        </div>
+                        <div class="title">{{v.productName}}</div>
+                        <div class="subtit">{{v.productPrice}}</div>
+                        <div class="info">
+                            <div class="mall">{{v.productFrom}}&nbsp;&nbsp; {{v.productTime}}&nbsp;&nbsp; {{v.productTips}} </div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+</div>
+
+
+<!--foot-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" >
+            <img src="../images/top.jpg" alt="" width="15" height="15">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color:red">手机App下载</a>
+            <a href="index.html">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/template.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/inlanddiscount.js"></script>
+<script src="../lib/less.min.js"></script>
+<script>
+    less.watch();
+</script>
+</body>
+</html>

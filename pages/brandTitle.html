@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>品牌列表</title>
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet/less" href="../css/brandtitle.less">
+    <link rel="stylesheet" href="../css/brandtitle.css">
+</head>
+<body>
+<!--header-->
+<div class='header'>
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="appdown">
+        <a href="index.html">
+            <img src="../images/header_app.png" alt="">
+        </a>
+    </div>
+</div>
+
+<!--search-->
+<div class="form-search">
+    <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品" >
+        <input type="button" value="搜索">
+    </form>
+</div>
+
+<!--brand-list-->
+<div class="brand-list">
+    <!--brand-list-title-->
+    <div class="brand-list-title">
+        <a href="../index.html" class="list-title1">首页</a>>
+        <a href="category.html" class="list-title2">全部分类</a>>
+        <a href="#" class="list-title3">笔记本电脑</a>
+        <a href="#" class="select">筛选</a>
+    </div>
+    <!--hot-->
+    <div class="hot">热门品牌</div>
+    <!--标题id列表-->
+    <div class="brand-con clearfix">
+        <ul class="cate-title">
+                <script type="text/html" id="cateId">
+                    {{each result as v i}}
+                    <li>
+                        <a href="brand.html?categoryid={{v.categoryId}}&brandtitleid={{v.brandTitleId}}">{{v.brandTitle}}</a>
+                    </li>
+                    {{/each}}
+                </script>
+
+        </ul>
+    </div>
+
+</div>
+
+<!--foot-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width:40%; border:0;">
+            <img src="../images/top.jpg" alt="" width="15" height="15">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color:red">手机App下载</a>
+            <a href="index.html">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/template.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/brandtitle.js"></script>
+<script src="../lib/less.min.js"></script>
+<script>
+    less.watch();
+</script>
+</body>
+</html>

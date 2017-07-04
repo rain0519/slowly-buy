@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣商品详情页</title>
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet/less" href="../css/inlanddiscountproduct.less">
+    <link rel="stylesheet" href="../css/inlanddiscountproduct.css">
+</head>
+<body>
+<!--head-->
+<div class="head">
+    <div class="back"><a href="inlanddiscount.html">&lt</a></div>
+    <h1>国内折扣</h1>
+    <div class="home">
+        <a href="javascript:;" class="icon-app"></a>
+    </div>
+</div>
+
+
+<!--inlanddiscount-product-->
+<div class="inlanddiscount-product">
+    <div class="container">
+        <div class="cup-content">
+            <!--模板引擎第一次开始-->
+            <script type="text/html" id="conInfo">
+                {{each result as v i}}
+                <h3 class="proName">{{v.productName}}</h3>
+                <p><span class="price">{{v.productPrice}}</span></p>
+                <div class="info">
+                    <span class="small">{{v.productFrom}}</span>
+                    <span class="addtime">{{v.productTime}}</span>
+                    <span class="author">{{v.productTips}}</span>
+                </div>
+                <div class="conn clearfix">
+                    <div class="pic-right"><img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/24/190_190_0_36618798b6e1a98d9f4ae8f7a195f41b.jpg" alt="新低价：MTG Style 系列 中性 Body Make Seat Style 脊椎护腰坐垫"></div>
+                    <!--产品主要内容-->
+                    <div class="conten">
+                        <p class="proInfo">{{v.productInfo}}</p>
+                        <p class="pic-lg">{{#v.productImg}}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </script>
+        </div>
+        <div class="area">
+              <script type="text/html">
+                    {{#v.productCity}}
+              </script>
+        </div>
+        <div class="golink">
+             <a href="javascript:;">前往购买</a>
+        </div>
+
+
+        <!--扫二维码-->
+        <div class="cup-erm">
+            <img src="../images/mmbweixin2.png" alt="">
+        </div>
+        <!--底部评论-->
+        <div class="cup-pl">
+            <!--模板引擎-->
+            <script type="text/html" id="productComment">
+                {{each result as v i}}
+                {{#v.productComment}}
+                {{/each}}
+            </script>
+        </div>
+    </div>
+</div>
+
+<!--foot-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" >
+            <img src="../images/top.jpg" alt="" width="15" height="15">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color:red">手机App下载</a>
+            <a href="index.html">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/template.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/inlanddiscountproduct.js"></script>
+<script src="../lib/less.min.js"></script>
+<script>
+    less.watch();
+</script>
+</body>
+</html>

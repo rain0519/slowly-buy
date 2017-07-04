@@ -1,0 +1,106 @@
+/*header*/
+/*menu*/
+.menu {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.menu ul {
+  width: 100%;
+}
+.menu ul li {
+  margin-top: 15px;
+  text-align: center;
+  float: left;
+  width: 25%;
+}
+.menu ul li a img {
+  width: 50px;
+}
+.menu ul li a p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+/*recommen*/
+.rec-list {
+  height: 35px;
+  background-color: #ff9000;
+  padding-left: 10px;
+  color: #fff;
+  line-height: 35px;
+}
+.rec-list img {
+  float: right;
+  padding-top: 8px;
+  width: 30px;
+  padding-right: 10px;
+}
+/*recommen-product*/
+.recommen-product {
+  background-color: #f1f1f1;
+  padding-bottom: 10px;
+}
+.recommen-product .product-list {
+  background-color: #fff;
+  padding-bottom: 5px;
+  text-align: left;
+  font-size: 14px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.recommen-product .product-list ul li {
+  padding: 14px 8px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.recommen-product .product-list ul li a {
+  display: block;
+}
+.recommen-product .product-list ul li a .pic {
+  width: 110px;
+  float: left;
+}
+.recommen-product .product-list ul li a .pic img {
+  width: 100px;
+  height: 100px;
+}
+.recommen-product .product-list ul li a .info .title {
+  color: #333;
+  min-height: 57px;
+  line-height: 19px;
+  font-size: 15px;
+  text-align: left;
+}
+.recommen-product .product-list ul li a .info .title span {
+  color: #ff6c00;
+}
+.recommen-product .product-list ul li a .info .other {
+  margin: 8px;
+  color: #a1a1a1;
+  font-size: 12px;
+}
+.recommen-product .product-list ul li a .info .other .mall {
+  float: left;
+}
+.recommen-product .product-list ul li a .info .other .comment {
+  float: right;
+}
+.recommen-product .product-list ul li a .info .other .comment i {
+  display: inline-block;
+  width: 14px;
+  height: 15px;
+  color: #a1a1a1;
+  vertical-align: -2px;
+}
+.recommen-product .product-list .more-bar {
+  text-align: center;
+  width: 100%;
+}
+.recommen-product .product-list .more-bar a {
+  display: block;
+  line-height: 30px;
+  background-color: #f4f4f4;
+  font-size: 13px;
+  background-image: linear-gradient(#ffffff, #f4f4f4);
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

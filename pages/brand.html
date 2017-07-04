@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>品牌</title>
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet/less" href="../css/brand.less">
+    <link rel="stylesheet" href="../css/brand.css">
+</head>
+<body>
+<!--header-->
+<div class='header'>
+    <div class="logo">
+        <a href="index.html">
+            <img src="../images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="appdown">
+        <a href="index.html">
+            <img src="../images/header_app.png" alt="">
+        </a>
+    </div>
+</div>
+
+<!--search-->
+<div class="form-search">
+    <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品" >
+        <input type="button" value="搜索">
+    </form>
+</div>
+
+<!--brand-content-->
+<div class="brand-list">
+    <!--brand-list-title-->
+    <div class="brand-list-title">
+        <a href="../index.html" class="list-title1">首页</a>>
+        <a href="category.html" class="list-title2">全部分类</a>>
+        <a href="#" class="list-title3">笔记本电脑</a>
+        <a href="#" class="select">筛选</a>
+    </div>
+
+
+    <!--哪个牌子好-->
+    <div class="hd hot">
+        <h3><span></span>哪个牌子好</h3>
+    </div>
+    <!--哪个牌子好下的列表-->
+    <div class="row clearfix brand-list">
+        <ul class="category-list">
+           <!-- <li>
+                <a href="#">
+                    <em>1</em>
+                    <div class="inner">
+                        <div class="tit">格力空调</div>
+                        <p>30天全网销售</p>
+                    </div>
+                </a>
+            </li>-->
+            <script type="text/html" id="cateld">
+                {{each result as v i}}
+                <li>
+                    <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.brandName}}&pageid=1">
+                        <em class="top">1</em>
+                        <div class="inner">
+                            <div class="tit">{{v.brandName}}</div>
+                            <p>{{v.brandInfo}}</p>
+                        </div>
+                    </a>
+                </li>
+            {{/each}}
+            </script>
+
+        </ul>
+    </div>
+    <!--产品销量-->
+    <div class="hd two">
+        <h3>
+            <a href="javascript:;"><span></span>产品销量排行</a>
+        </h3>
+    </div>
+    <!--产品销量下的列表-->
+    <div class="product-list">
+        <ul class="pro-lis">
+            <li>
+                <a href="#">
+                    <div class="pic">
+                        <img src="http://img2014.zuyushop.com/ProPic/201412/Thumb/Thumb_2014120015214690353.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="tit">奥克斯</div>
+                        <div class="price">
+                            <em>￥1499</em>
+                            <span class="star">
+                                <em class="start5">★★★★★</em>
+                            </span>
+                        </div>
+                        <div class="other">
+                            <em>报价</em>
+                            <em>评论</em>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <script type="text/html" id="proId">
+                {{each result as v i}}
+                <li>
+                    <a href="productdetails.html?productid={{v.productListId}}">
+                        <div class="pic">
+                            {{#v.productImg}}
+                        </div>
+                        <div class="info">
+                            <div class="tit">{{v.productName}}</div>
+                            <div class="price">
+                                <em>{{v.productPrice}}</em>
+                                <span class="star">
+                                    <em class="start5">★★★★★</em>
+                                </span>
+                            </div>
+                            <div class="other">
+                                <em>{{v.productQuote}}</em>
+                                <em>{{v.productCom}}</em>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </script>
+
+        </ul>
+    </div>
+    <!--平板电视的评论-->
+    <div class="hd three">
+        <h3>
+            <a href="#">平板电视最新评论</a>
+        </h3>
+    </div>
+    <!--平板电视评论下的列表-->
+    <div class="bd pllist product-com">
+        <ul class="plbx">
+            <li>
+                <a href="javascript:;">
+                    <div class="protit clearfix">
+                        <div class="pic">
+                            <img src="http://img2014.zuyushop.com/ProPic/201412/Thumb/Thumb_2014120015214690353.jpg" alt="">
+                        </div>
+                        <div class="tit">奥克斯</div>
+                    </div>
+                    <div class="plbox">
+                        <div class="name">
+                            "rain****wxy"
+                            <span class="star">
+                                <em>★★★★★</em>
+                            </span>
+                            <i>2017/07/13</i>
+                        </div>
+                        <div class="con">总体满意吧，毕竟一分价钱一分货，做工简陋，显得份量没那么足。外机很轻，不知道是啥牌子压缩机，外观漂亮，就是工艺差了点 很一般的孰料板，然后就是最为重要的制冷效果，适合18平方一下的，大房间上1.5 吧  1匹的要开一个两个小时，房间整体温度才会降下来，噪音方面确实很静音，制冷效果不是很理想，但是也够用了！安装师傅很积极，上午一收货，下午立马就来安装，速度很赞，但是做起事情来，太急忙了，一点都不细心弄，还不停的接电话，说什么马上到 20分钟到，很赶时间的样子，随便给我装好了，连打孔的那个孰料圈都忘记卡上去，打孔很薄的墙壁 收了我50块钱，最后安装完，急忙走了！ 评论发布自 购买自：京东商城</div>
+                    </div>
+                </a>
+            </li>
+            <script type="text/html" id="plcon">
+                {{each result as v i}}
+                <li>
+                    <a href="javascript:;">
+                        <div class="protit clearfix">
+                            <div class="pic">
+                                <img src="http://img2014.zuyushop.com/ProPic/201412/Thumb/Thumb_2014120015214690353.jpg" alt="">
+                            </div>
+                            <div class="tit">奥克斯</div>
+                        </div>
+                        <div class="plbox">
+                            <div class="name">
+                                {{v.comName}}
+                                <span class="star">
+                                <em>★★★★★</em>
+                            </span>
+                                <i>{{v.comTime}}</i>
+                            </div>
+                            <div class="con">{{v.comContent}}</div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+
+
+</div>
+
+
+<!--foot-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width:40%; border:0;">
+            <img src="../images/top.jpg" alt="" width="15" height="15">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color:red">手机App下载</a>
+            <a href="index.html">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/template.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/brand.js"></script>
+<script src="../lib/less.min.js"></script>
+<script>
+    less.watch();
+</script>
+</body>
+</html>

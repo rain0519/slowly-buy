@@ -1,0 +1,158 @@
+body {
+  background: #fff;
+  color: #000;
+  font-family: Arial;
+  width: 100%;
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+input,
+select,
+form image,
+button {
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+textarea {
+  width: 98%;
+  border: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+em,
+i {
+  font-style: normal;
+}
+img,
+input {
+  vertical-align: middle;
+  border: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.tabsColor {
+  color: #e4393c;
+  border-bottom: 2px solid #e4393c;
+}
+.header {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+}
+.header .logo {
+  float: left;
+  padding: 12px;
+  width: 75%;
+  margin-left: 5px;
+}
+.header .logo a img {
+  max-height: 25px;
+}
+.header .appdown {
+  float: right;
+  padding: 7px;
+}
+.header .appdown a img {
+  max-height: 34px;
+}
+/*search*/
+.form-search {
+  padding: 10px ;
+  height: 50px;
+}
+.form-search .search {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-right: 80px;
+}
+.form-search .search input[type="search"] {
+  width: 100%;
+  height: 30px;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  padding-left: 20px;
+  line-height: 30px;
+}
+.form-search .search input[type="button"] {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  height: 30px;
+  background-color: #ff841d;
+  color: #fff;
+  width: 63px;
+  border-radius: 15px;
+  font-size: 16px;
+  line-height: 30px;
+}
+/*foot*/
+.foot {
+  padding-top: 25px;
+}
+.foot .foot-top {
+  background-color: #efefef;
+  height: 33px;
+  line-height: 33px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.foot .foot-top a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 30%;
+}
+.foot .footer {
+  background-color: #efefef;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding: 15px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>白菜价商品列表</title>
+    <!--<link rel="stylesheet/less" href="../css/base.less">-->
+    <link rel="stylesheet" href="../css/base.css">
+    <!--<link rel="stylesheet/less" href="../css/baicaijia.less">-->
+    <link rel="stylesheet" href="../css/baicaijia.css">
+    <link rel="stylesheet" text="text/css" href="../font/f2/iconfont.css">
+</head>
+<body>
+<!--head-->
+<div class="head">
+    <div class="back"><a href="../index.html">&lt;</a></div>
+    <h1>白菜价-淘宝内部劵</h1>
+    <div class="home">
+        <a href="javascript:;" class="icon-app"></a>
+    </div>
+</div>
+<!--bcj-head-->
+<div class="bcj">
+    <!--白菜价导航-->
+    <div class="bcj-head">
+        <div class="bcj-title">
+            <div class="ul-wrap">
+                <ul class="bcj-nav clearfix">
+                    <!--模板第一次使用-->
+                    <script type="text/html" id="bcjNav">
+                    {{each result as v i}}
+                    <li>
+                        <a href="javasript:;" data-id={{v.titleId}}>{{v.title}}</a>
+                    </li>
+                    {{/each}}
+                    </script>
+                </ul>
+            </div>
+        </div>
+        <div class="search">
+            <div class="iconfont icon-sousuo_sousuo"></div>
+        </div>
+    </div>
+    <!--商品列表-->
+    <div class="bcj-list">
+        <ul class="clearfix lists">
+            <!--<li class="list-box">
+                <a href="#" class="gobuy"></a>
+                <div class="pic">
+                    <img src="http://seller.manmanbuy.com/ProPic/2016100009230957088.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="top">
+                        <div class="tlt">包邮</div>
+                        <div class="pri">￥12.2</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="bar">进度条</div>
+                        <div class="dic">优惠券链接</div>
+                    </div>
+                </div>
+            </li>-->
+            <script type="text/html" id="lists">
+            {{each result as v i}}
+            <li class="list-box clearfix">
+                <a href="http://s.click.taobao.com/lkqGHQx" class="gobuy"></a>
+                <div class="pic">
+                    {{#v.productImg}}
+                </div>
+                <div class="info">
+                    <div class="top">
+                        <div class="tlt">{{#v.productName}}</div>
+                        <div class="pri">{{#v.productPrice}}</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="bars">{{#v.productCouponRemain}}</div>
+                        <div class="dic">
+                            <div class="yhj">{{#v.productCoupon}}</div>
+                            <div class="xdlink">{{#v.productHref}}</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+            </script>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<!--foot-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" >
+            <img src="../images/top.jpg" alt="" width="15" height="15">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color:red">手机App下载</a>
+            <a href="index.html">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/template.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/baicaijia.js"></script>
+<!--<script src="../lib/less.min.js"></script>-->
+<!--<script>-->
+    <!--less.watch();-->
+<!--</script>-->
+</body>
+</html>

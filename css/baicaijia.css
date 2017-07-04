@@ -1,0 +1,275 @@
+/*baicaijia*/
+/*head*/
+html,
+body {
+  width: 100%;
+}
+.head {
+  background-color: #f4483e;
+  color: #fff;
+  height: 44px;
+  width: 100%;
+  position: relative;
+}
+.head .back {
+  width: 50px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 44px;
+  font-family: "宋体";
+  font-weight: bold;
+  float: left;
+  position: relative;
+}
+.head .back a {
+  display: block;
+  color: #fff;
+}
+.head h1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90%;
+  text-align: center;
+  line-height: 44px;
+  font-size: 20px;
+}
+.head .home {
+  width: 50px;
+  height: 44px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.head .home .icon-app {
+  display: block;
+  height: 44px;
+  background-image: url("../images/header_app.png");
+  width: 50px;
+  background-repeat: no-repeat;
+  margin-top: 5px;
+  background-size: 32px;
+}
+.bcj {
+  background-color: #f1f1f1;
+  /*bj-head*/
+  /*bcj-list*/
+}
+.bcj .bcj-head {
+  /*max-width: 960px;*/
+  position: relative;
+}
+.bcj .bcj-head .bcj-title {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+}
+.bcj .bcj-head .bcj-title .ul-wrap {
+  overflow: hidden;
+}
+.bcj .bcj-head .bcj-title .ul-wrap ul {
+  width: 800px;
+}
+.bcj .bcj-head .bcj-title .ul-wrap ul li {
+  float: left;
+  height: 36px;
+  font-size: 14px;
+  line-height: 36px;
+}
+.bcj .bcj-head .bcj-title .ul-wrap ul li a {
+  display: block;
+  color: #333;
+  display: inline-block;
+  text-align: center;
+  margin: 0 12px;
+}
+.bcj .bcj-head .bcj-title .ul-wrap ul .current {
+  border-bottom: 3px solid red;
+}
+.bcj .bcj-head .bcj-title .ul-wrap ul .current a {
+  color: red;
+}
+.bcj .bcj-head .search {
+  width: 39px;
+  height: 38px;
+  border-left: 1px solid #e6e6e6;
+  background-color: #FBFBFB;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.bcj .bcj-head .search .icon-sousuo_sousuo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #999;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+}
+.bcj .bcj-list {
+  font-size: 14px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.bcj .bcj-list ul li {
+  overflow: hidden;
+  background-color: #fff;
+  margin: 6px auto;
+  position: relative;
+  padding: 10px 5px;
+}
+.bcj .bcj-list ul li .gobuy {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.bcj .bcj-list ul li .pic {
+  float: left;
+  width: 135px;
+  height: 130px;
+  margin-right: 10px;
+}
+.bcj .bcj-list ul li .pic img {
+  width: 100%;
+  height: 100%;
+}
+.bcj .bcj-list ul li .info .top {
+  height: auto;
+}
+.bcj .bcj-list ul li .info .top .tlt {
+  min-height: 28px;
+  max-height: 40px;
+  line-height: 1.5;
+  text-align: left;
+}
+.bcj .bcj-list ul li .info .top .pri {
+  font-size: 24px;
+  color: #fc353a;
+  margin-top: 4px;
+  position: relative;
+  width: 100%;
+}
+.bcj .bcj-list ul li .info .top .pri i {
+  font-size: 16px;
+  vertical-align: middle;
+  font-style: normal;
+  margin-right: 4px;
+}
+.bcj .bcj-list ul li .info .top .pri em {
+  font-size: 12px;
+  vertical-align: middle;
+  font-style: normal;
+}
+.bcj .bcj-list ul li .info .top .pri del {
+  text-decoration: line-through;
+  font-size: 13px;
+  color: #a8a8a8;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.bcj .bcj-list ul li .info .bottom {
+  position: absolute;
+  bottom: 10px;
+  padding: 0 5px 0 135px;
+  width: 100%;
+}
+.bcj .bcj-list ul li .info .bottom .bars {
+  position: absolute;
+  bottom: 30px;
+  padding: 0px 5px 0px 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.bcj .bcj-list ul li .info .bottom .bars .bar {
+  height: 25px;
+}
+.bcj .bcj-list ul li .info .bottom .bars .bar a.goquan {
+  display: block;
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  z-index: 0;
+  bottom: 0px;
+  left: 130px;
+  z-index: 3;
+}
+.bcj .bcj-list ul li .info .bottom .bars .bar i {
+  position: relative;
+  box-sizing: border-box;
+  width: 82px;
+  height: 14px;
+  border: 1px solid #fc353a;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 900;
+  background: #ffb7b7;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+}
+.bcj .bcj-list ul li .info .bottom .bars .bar i em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 5px;
+  background: #fc353a;
+  display: block;
+  transition: all 0.3s cubic-bezier(0.39, 0.58, 0.57, 1);
+  width: 0;
+}
+.bcj .bcj-list ul li .info .bottom .bars .bar i span {
+  font-size: 12px;
+  line-height: 11px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.bcj .bcj-list ul li .info .bottom .bars .bar b {
+  font-weight: normal;
+  font-size: 12px;
+  color: #999999;
+  vertical-align: 3px;
+  margin-left: 10px;
+  color: #fc353a;
+}
+.bcj .bcj-list ul li .info .bottom .dic .yhj a {
+  border: 1px dotted #e4393c;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 5px;
+  font-size: 12px;
+  color: #e4393c;
+  position: relative;
+  z-index: 1;
+  bottom: -28px;
+  margin-left: 10px;
+}
+.bcj .bcj-list ul li .info .bottom .dic .xdlink {
+  float: right;
+  margin-right: 5px;
+}
+.bcj .bcj-list ul li .info .bottom .dic .xdlink a {
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  display: block;
+  background-color: #ff5e5d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 0px 5px;
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+}

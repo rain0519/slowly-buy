@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>分类列表</title>
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet/less" href="../css/productlist.less">
+    <link rel="stylesheet" href="../css/productlist.css">
+</head>
+<body>
+<!--header-->
+<div class='header'>
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="appdown">
+        <a href="index.html">
+            <img src="../images/header_app.png" alt="">
+        </a>
+    </div>
+</div>
+
+<!--search-->
+<div class="form-search">
+    <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品" >
+        <input type="button" value="搜索">
+    </form>
+</div>
+
+<!--product-list-->
+<div class="product-list">
+    <!--product-list-title-->
+    <div class="product-list-title">
+        <a href="../index.html" class="list-title1">首页</a>>
+        <a href="category.html" class="list-title2">全部分类</a>>
+        <a href="#" class="list-title3">笔记本电脑</a>
+        <a href="#" class="select">筛选</a>
+    </div>
+    <!--product-list-con-->
+    <div class="product-list-con">
+        <ul class="product-lis-con">
+            <li class="clearfix">
+                <a href="#"></a>
+                <div class="pic">
+                    <img src="../images/ic_cu.png" alt="" width=100 height=100>
+                </div>
+                <div class="info">
+                    <div class="tit">联想</div>
+                    <div class="price">
+                        <em>￥6899.00</em>
+                    </div>
+                    <div class="other">
+                        <em>报价(3)</em>
+                        <em>评论(4343)</em>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="page-button clearfix">
+            <span class="pageUp"><a href="#">上一页</a></span>
+            <span>
+                <select name="select" class="selectPage">
+                    <option value="1" selected>1/3</option>
+                    <option value="2" >2/3</option>
+                    <option value="3" >3/3</option>
+                </select>
+            </span>
+            <span class="pageDown"><a href="#">下一页</a></span>
+        </div>
+    </div>
+</div>
+
+<!--foot-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width:40%; border:0;">
+            <img src="../images/top.jpg" alt="" width="15" height="15">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color:red">手机App下载</a>
+            <a href="index.html">慢慢买手机版</a>--掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/template.js"></script>
+<script type="text/html" id="listCon">
+    <ul>
+        {{each result as value i}}
+        <li class="clearfix">
+            <a href="productdetails.html?{{value.productId}}+{{value.categoryId}}" data-id="{{value.productId}}" class="clearfix">
+                <div class="pic">
+                    {{#value.productImg}}
+                </div>
+                <div class="info ciearfix">
+                    <div class="tit">{{value.productName}}</div>
+                    <div class="price">
+                        <em>{{value.productPrice}}</em>
+                    </div>
+                    <div class="other">
+                        <em>{{value.productQuote}}</em>
+                        <em>{{value.productCom}}</em>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+
+</script>
+<script type="text/html" id="pageTips" class="classtips">
+    {{each result as v i}}
+    <option>{{v.pageid}}/{{v.totalPage}}</option>
+    {{/each}}
+</script>
+<script src="../js/base.js"></script>
+<script src="../js/productlist.js"></script>
+<script src="../lib/less.min.js"></script>
+<script>
+    less.watch();
+</script>
+</body>
+</html>
